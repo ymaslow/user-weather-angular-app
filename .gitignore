@@ -1,0 +1,25 @@
+# Node modules
+node_modules/
+
+# Angular build output
+dist/
+out-tsc/
+
+# IDE і редактори
+.vscode/
+.idea/
+
+# Логи
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Кеші Angular
+.angular/
+
+# Середовище
+.env
+
+# Системні файли
+.DS_Store
+Thumbs.db
