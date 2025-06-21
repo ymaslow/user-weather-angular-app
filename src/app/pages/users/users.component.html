@@ -1,0 +1,17 @@
+<h2 class="text-center">User Weather App</h2>
+<div class="grid">
+  <div *ngFor="let user of users" class="card">
+    <img [src]="user.picture.large" alt="User Photo" />
+    <h3>{{ user.name.first }} {{ user.name.last }}</h3>
+    <p><strong>Стать:</strong> {{ user.gender }}</p>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <p><strong>Місцезнаходження:</strong> {{ user.location.city }}, {{ user.location.country }}</p>
+
+    <div class="weather" *ngIf="user.weather">
+      <p><strong>Погода:</strong> {{ getIcon(user.weather.code) }}</p>
+      <p>🌡️ Поточна: {{ user.weather.current }}°C</p>
+      <p>🔼 Макс: {{ user.weather.max }}°C</p>
+      <p>🔽 Мін: {{ user.weather.min }}°C</p>
+    </div>
+  </div>
+</div>
